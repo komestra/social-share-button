@@ -11,10 +11,10 @@ window.SocialShareButton =
     appkey = $(el).data('appkey') || ''
     $parent = $(el).parent()
     title = encodeURIComponent($(el).data(site + '-title') || $parent.data('title') || '')
-    img = encodeURIComponent($parent.data("img") || '')
-    url = encodeURIComponent($parent.data("url") || '')
+    img = encodeURIComponent($(el).data(site + "-img") || $parent.data("img") || '')
+    url = encodeURIComponent($(el).data(site + "-url") || $parent.data("url") || '')
     via = encodeURIComponent($parent.data("via") || '')
-    desc = encodeURIComponent($parent.data("desc") || ' ')
+    desc = encodeURIComponent($(el).data(site + "-desc") || $parent.data("desc") || ' ')
 
     # tracking click events if google analytics enabled
     ga = window[window['GoogleAnalyticsObject'] || 'ga']
